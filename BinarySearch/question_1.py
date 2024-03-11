@@ -30,8 +30,10 @@ class BinaryList:
              print("not allowed")
         else:
             self.itemArr.insert(pos,insertItem) 
+            print("successfully inserted")
     def deleteItem(self,delItem):
         self.itemArr.remove(delItem)
+        print("successfully deleted")
 
 obj=BinaryList([1,2,3,4,5])
 obj.binarySearch(5)

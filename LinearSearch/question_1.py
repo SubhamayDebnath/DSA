@@ -18,8 +18,10 @@ class LinearList:
             print(f"{searchItem} is not found")
     def insertItem(self,pos,insertItem):
         self.itemArr.insert(pos,insertItem)
+        print("successfully inserted")
     def deleteItem(self,delItem):
         self.itemArr.remove(delItem)
+        print("successfully deleted")
 obj=LinearList([1,3,9,8,7],int)
 obj.linearSearch(9)
 obj.insertItem(0,99)

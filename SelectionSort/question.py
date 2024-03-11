@@ -17,7 +17,7 @@ class SelectionSort:
                     self.arr[k]=temp
     def insertItem(self,pos,item):
         self.arr.insert(pos,item)
-        print("successfully inserted")
+        print("successfully inserted ")
     def deleteItem(self,delItem):
         self.arr.remove(delItem)
         print("successfully deleted")

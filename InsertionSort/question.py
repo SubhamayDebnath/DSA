@@ -8,15 +8,28 @@ class InsertionSort:
                 exit()
     def display(self):
         print(self.arr)
-    def InsertionSort(self):
+    def insertionSort(self):
         for k in range(1,len(self.arr)):
             item=self.arr[k]
             pos=k-1
-            while item < self.arr[pos] and pos > len(self.arr):
+            while item < self.arr[pos] and pos >=0:
                 self.arr[pos+1]=self.arr[pos]
-                pos-+1
+                pos=pos-1
             self.arr[pos+1]=item
+    def insertItem(self,pos,item):
+        self.arr.insert(pos,item)
+        print("successfully inserted")
+    def deleteItem(self,delItem):
+        self.arr.remove(delItem)
+        print("successfully deleted")
+           
 obj=InsertionSort([9,3,1,8,7],int)
 obj.display()
-obj.InsertionSort()
+obj.insertionSort()
+obj.display()
+obj.insertItem(0,99)
+obj.display()
+obj.insertionSort()
+obj.display()
+obj.deleteItem(99)
 obj.display()

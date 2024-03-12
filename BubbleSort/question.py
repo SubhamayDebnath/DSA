@@ -7,6 +7,12 @@ class BubbleSort:
                 exit()
     def display(self):
         print(self.arr)
+    def insertItem(self,pos,item):
+        self.arr.insert(pos,item)
+        print("successfully inserted")
+    def deleteItem(self,delItem):
+        self.arr.remove(delItem)
+        print("successfully deleted")
     def bubbleSort(self):
         for j in range(1,len(self.arr)):
             for k in range(len(self.arr)-j):
@@ -14,12 +20,7 @@ class BubbleSort:
                     temp=self.arr[k]
                     self.arr[k]=self.arr[k+1]
                     self.arr[k+1]=temp
-    def insertItem(self,pos,item):
-        self.arr.insert(pos,item)
-        print("successfully inserted")
-    def deleteItem(self,delItem):
-        self.arr.remove(delItem)
-        print("successfully deleted")
+    
 obj=BubbleSort([3,7,1,4,5])
 obj.bubbleSort()
 obj.display()

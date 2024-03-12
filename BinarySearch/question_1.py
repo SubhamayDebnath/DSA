@@ -12,6 +12,15 @@ class BinaryList:
             exit()
     def display(self):
         print(self.itemArr)
+    def insertItem(self,pos,insertItem):
+        if self.itemArr [pos-1] > insertItem:
+             print("not allowed")
+        else:
+            self.itemArr.insert(pos,insertItem) 
+            print("successfully inserted")
+    def deleteItem(self,delItem):
+        self.itemArr.remove(delItem)
+        print("successfully deleted")
     def binarySearch(self,searchItem):
         beg=0
         end=self.arrSize-1
@@ -25,15 +34,7 @@ class BinaryList:
                 print(end)
             else:
                 beg=mid+1
-    def insertItem(self,pos,insertItem):
-        if self.itemArr [pos-1] > insertItem:
-             print("not allowed")
-        else:
-            self.itemArr.insert(pos,insertItem) 
-            print("successfully inserted")
-    def deleteItem(self,delItem):
-        self.itemArr.remove(delItem)
-        print("successfully deleted")
+    
 
 obj=BinaryList([1,2,3,4,5])
 obj.binarySearch(5)

@@ -9,6 +9,12 @@ class LinearList:
                 exit()
     def display(self):
         print(self.itemArr)
+    def insertItem(self,pos,insertItem):
+        self.itemArr.insert(pos,insertItem)
+        print("successfully inserted")
+    def deleteItem(self,delItem):
+        self.itemArr.remove(delItem)
+        print("successfully deleted")
     def linearSearch(self ,searchItem):
         for i in range(self.arrSize):
             if searchItem == self.itemArr[i]:
@@ -16,12 +22,7 @@ class LinearList:
                 return i
         else:
             print(f"{searchItem} is not found")
-    def insertItem(self,pos,insertItem):
-        self.itemArr.insert(pos,insertItem)
-        print("successfully inserted")
-    def deleteItem(self,delItem):
-        self.itemArr.remove(delItem)
-        print("successfully deleted")
+    
 obj=LinearList([1,3,9,8,7],int)
 obj.linearSearch(9)
 obj.insertItem(0,99)

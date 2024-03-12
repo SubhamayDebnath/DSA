@@ -17,5 +17,6 @@ class InsertionSort:
                 pos-+1
             self.arr[pos+1]=item
 obj=InsertionSort([9,3,1,8,7],int)
+obj.display()
 obj.InsertionSort()
 obj.display()

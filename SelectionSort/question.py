@@ -8,7 +8,7 @@ class SelectionSort:
                 exit()
     def display(self):
         print(self.arr)
-        def insertItem(self,pos,item):
+    def insertItem(self,pos,item):
         self.arr.insert(pos,item)
         print("successfully inserted")
     def deleteItem(self,delItem):

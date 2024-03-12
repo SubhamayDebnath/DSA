@@ -18,8 +18,11 @@ class BubbleSort:
         self.arr.insert(pos,item)
         print("successfully inserted")
     def deleteItem(self,delItem):
-        self.arr.remove(delItem)
-        print("successfully deleted")
+        if delItem in self.arr:
+            self.arr.remove(delItem)
+            print("successfully deleted")
+        else:
+            print (f"{delItem} not found")
 obj=BubbleSort([3,7,1,4,5])
 obj.bubbleSort()
 obj.display()

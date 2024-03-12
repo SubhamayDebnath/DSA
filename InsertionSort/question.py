@@ -20,8 +20,11 @@ class InsertionSort:
         self.arr.insert(pos,item)
         print("successfully inserted")
     def deleteItem(self,delItem):
-        self.arr.remove(delItem)
-        print("successfully deleted")
+        if delItem in self.arr:
+            self.arr.remove(delItem)
+            print("successfully deleted")
+        else:
+            print (f"{delItem} not found")
            
 obj=InsertionSort([9,3,1,8,7],int)
 obj.display()

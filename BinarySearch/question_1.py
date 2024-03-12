@@ -32,8 +32,11 @@ class BinaryList:
             self.itemArr.insert(pos,insertItem) 
             print("successfully inserted")
     def deleteItem(self,delItem):
-        self.itemArr.remove(delItem)
-        print("successfully deleted")
+        if delItem in self.arr:
+            self.arr.remove(delItem)
+            print("successfully deleted")
+        else:
+            print (f"{delItem} not found")
 
 obj=BinaryList([1,2,3,4,5])
 obj.binarySearch(5)

@@ -20,8 +20,8 @@ class LinearList:
         self.itemArr.insert(pos,insertItem)
         print("successfully inserted")
     def deleteItem(self,delItem):
-        if delItem in self.arr:
-            self.arr.remove(delItem)
+        if delItem in self.itemArr:
+            self.itemArr.remove(delItem)
             print("successfully deleted")
         else:
             print (f"{delItem} not found")

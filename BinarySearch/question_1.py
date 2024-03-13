@@ -31,11 +31,12 @@ class BinaryList:
         else:
             self.itemArr.insert(pos,insertItem) 
             print("successfully inserted")
+            self.binarySearch()
     def deleteItem(self,delItem):
         if delItem in self.itemArr:
             self.itemArr.remove(delItem)
             print("successfully deleted")
-
+            self.binarySearch()
         else:
             print (f"{delItem} not found")
 

@@ -18,10 +18,12 @@ class SelectionSort:
     def insertItem(self,pos,item):
         self.arr.insert(pos,item)
         print("successfully inserted")
+        self.selectionSort()
     def deleteItem(self,delItem):
         if delItem in self.arr:
             self.arr.remove(delItem)
             print("successfully deleted")
+            self.selectionSort()
         else:
             print (f"{delItem} not found")
                

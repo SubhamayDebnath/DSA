@@ -35,6 +35,7 @@ class BinaryList:
         if delItem in self.itemArr:
             self.itemArr.remove(delItem)
             print("successfully deleted")
+
         else:
             print (f"{delItem} not found")
 

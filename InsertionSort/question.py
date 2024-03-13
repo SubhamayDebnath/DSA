@@ -19,10 +19,12 @@ class InsertionSort:
     def insertItem(self,pos,item):
         self.arr.insert(pos,item)
         print("successfully inserted")
+        self.insertionSort()
     def deleteItem(self,delItem):
         if delItem in self.arr:
             self.arr.remove(delItem)
             print("successfully deleted")
+            self.insertionSort()
         else:
             print (f"{delItem} not found")
            
@@ -31,8 +33,6 @@ obj.display()
 obj.insertionSort()
 obj.display()
 obj.insertItem(0,99)
-obj.display()
-obj.insertionSort()
 obj.display()
 obj.deleteItem(99)
 obj.display()

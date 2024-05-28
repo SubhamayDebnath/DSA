@@ -7,9 +7,9 @@ class LinearList:
             if type(j)!=dataType:
                 print("not same type of data")
                 exit()
-    def display(self):
+    def display(self):   
         print(self.itemArr)
-    def linearSearch(self ,searchItem):
+    def linearSearch(self,searchItem):
         for i in range(self.arrSize):
             if searchItem == self.itemArr[i]:
                 print(f"index of {searchItem} is {i}")
@@ -19,16 +19,14 @@ class LinearList:
     def insertItem(self,pos,insertItem):
         self.itemArr.insert(pos,insertItem)
         print("successfully inserted")
-        self.linearSearch()
     def deleteItem(self,delItem):
         if delItem in self.itemArr:
             self.itemArr.remove(delItem)
             print("successfully deleted")
-            self.linearSearch()
         else:
             print (f"{delItem} not found")
 obj=LinearList([1,3,9,8,7],int)
-obj.linearSearch(9)
-obj.insertItem(0,99)
+obj.linearSearch(1)
+# obj.insertItem(0,99)
 obj.deleteItem(1)
 obj.display()

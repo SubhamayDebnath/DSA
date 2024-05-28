@@ -23,7 +23,6 @@ class SingleLinkedList:
         n=Node(num)
         n.next=self.start
         self.start=n
-        return n
     def deleteLastNode(self):
         temp=self.start
         while temp.next != None:
